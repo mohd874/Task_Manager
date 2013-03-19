@@ -1,0 +1,24 @@
+Master
+- sign-in
+- Navigation (browse, search, about)
+
+Home
+- Welcome
+
+Browse
+- ?
+
+Search
+- will contain a search box. For start, the search will look only for the titles.
+- The results will be presented in normal table format.
+
+-----------------------------------------------------------------------------------
+
+DB
+
+Master: id, dateCreated, dateModified, uploadedBy, 
+
+Book: Title, author_id, file_location
+
+Author: name, biography
+
