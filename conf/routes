@@ -7,10 +7,19 @@ GET     /                           controllers.Application.index
 
 #Tasks
 GET     /tasks                      controllers.Application.tasks
-POST    /tasks                     controllers.Application.newTask
-POST    /tasks/:id/delete          controllers.Application.deleteTask(id: Long)
+POST    /tasks                      controllers.Application.newTask
+POST    /tasks/:id/delete           controllers.Application.deleteTask(id: Long)
 
-
+#Books Straming
+GET     /books                      controllers.BookServer.books
+GET		/stream1					controllers.BookServer.stream1
+GET		/stream2					controllers.BookServer.stream2
+GET		/stream3					controllers.BookServer.stream3
+GET		/getFile					controllers.BookServer.getFile
+GET		/pdfViewer					controllers.BookServer.pdfViewer
+POST	/uploadDirect				controllers.BookServer.uploadDirect
+POST	/uploadFile					controllers.BookServer.uploadFile
+GET 	/uploadFileForm				controllers.BookServer.uploadFileForm
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

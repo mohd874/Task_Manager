@@ -1,0 +1,45 @@
+@main("PDF Viewer") {
+	<div style="position:absolute;left:10px;top:10px;">
+<div id="documentViewer" class="flexpaper_viewer" style="width:770px;height:500px"></div>
+
+<script type="text/javascript">
+    function getDocumentUrl(document){
+        return "php/services/view.php?doc={doc}&format={format}&page={page}".replace("{doc}",document);
+    }
+
+    var startDocument = "Paper";
+
+    $('#documentViewer').FlexPaperViewer(
+            { config : {
+
+                PDFFile : 'http://localhost:9000/assets/pdf/mecca.pdf',
+
+                Scale : 0.6,
+                ZoomTransition : 'easeOut',
+                ZoomTime : 0.5,
+                ZoomInterval : 0.2,
+                FitPageOnLoad : true,
+                FitWidthOnLoad : false,
+                FullScreenAsMaxWindow : false,
+                ProgressiveLoading : false,
+                MinZoomSize : 0.2,
+                MaxZoomSize : 5,
+                SearchMatchAll : false,
+                InitViewMode : 'Portrait',
+                RenderingOrder : 'flash',
+                StartAtPage : '',
+
+                ViewModeToolsVisible : true,
+                ZoomToolsVisible : true,
+                NavToolsVisible : true,
+                CursorToolsVisible : true,
+                SearchToolsVisible : true,
+                WMode : 'window',
+                localeChain: 'en_US'
+            }}
+    );
+</script>
+<div style="width:760px;margin-top:10px;padding-left:10px; padding-top:10px; padding-bottom:10px; font-family:Verdana;font-size:10pt;background-color:#EFEFEF; border:1px solid #999;-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px 2px 4px 0px;font-family:'District Thin', helvetica, arial;font-weight:lighter;"><font style="font-size:15px;font-weight:bold">Notice</font><br/>You are viewing a document in FlexPaper using Adobe Flash. Consider purchasing a commercial license with support for <a href="http://flexpaper.devaldi.com/download.jsp?ref=FlexPaper">Adaptive UI </a> to maximize your browser coverage and reach devices such as the Apple iPad. <br/><br/>With <a href="http://flexpaper.devaldi.com/download.jsp?ref=FlexPaper">AdaptiveUI enabled</a>, the viewer adjust automatically to the visitors capabilities and supports rendering documents as flash, html4 and html5. The viewer gracefully degrades between all formats.<br/><br/>For more information on browser coverage please <a href="http://flexpaper.devaldi.com/docs_html_flash_html5.jsp?ref=FlexPaper">see our documentation</a>.</div>
+</div>
+
+}

@@ -1,0 +1,18 @@
+@(msg: String)
+
+@import helper._
+
+@main("Upload Files") {
+	@form(action = routes.BookServer.uploadFile, 'enctype -> "multipart/form-data") {
+    
+	    <input type="file" name="pdf">
+	    
+	    <p>
+	        <input type="submit">
+	    </p>
+	    <p>
+			@msg
+		</p>
+	    
+	}
+}
